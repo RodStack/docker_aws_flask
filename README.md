@@ -1,2 +1,2 @@
 # docker_aws_flask
-A flask app to containerized and deploy in AWS EC2
+Una app flask para crear, contenerizar la imangen y desplegar en AWS EC2
