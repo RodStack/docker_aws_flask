@@ -1,20 +1,20 @@
-# Use an official Python runtime as a parent image
+# Utiliza una imagen oficial de Python como imagen base
 FROM python:3.9-slim
 
-# Set the working directory to /app
+# Establece el directorio de trabajo en /app
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copia los contenidos del directorio actual al contenedor en /app
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
+# Instala los paquetes necesarios especificados en requirements.txt
 RUN pip install -r requirements.txt
 
-# Make port 80 available to the world outside this container
+# Hace el puerto 80 disponible para el mundo exterior al contenedor
 EXPOSE 80
 
-# Define environment variable
+# Define la variable de entorno
 ENV NAME World
 
-# Run app.py when the container launches
+# Ejecuta app.py cuando se lance el contenedor
 CMD ["python", "app.py"]
